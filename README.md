@@ -1,6 +1,8 @@
 # Idp Example (idp-example)
 
-See live demo at: [https://idp-example.now.sh](https://idp-example.now.sh)
+See live demo at: [https://idp-example.now.sh](https://idp-example.now.sh).
+
+For an example of google sign-in using a client side js library see: [https://svgtoken.now.sh/](https://svgtoken.now.sh/).
 
 ## Install the dependencies
 ```bash
