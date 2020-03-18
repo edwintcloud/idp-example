@@ -1,6 +1,6 @@
 # Idp Example (idp-example)
 
-A Quasar Framework app
+See live demo at: [https://idp-example.now.sh](https://idp-example.now.sh)
 
 ## Install the dependencies
 ```bash
