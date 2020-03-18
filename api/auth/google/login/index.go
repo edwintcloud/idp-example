@@ -44,5 +44,5 @@ func generateOauthState() string {
 func createOauthCookie(state string) http.Cookie {
 	exp := time.Now().Add(20 * time.Minute) // 20 mins
 
-	return http.Cookie{Name: "google-oauth-state", Value: state, Expires: exp}
+	return http.Cookie{Name: "google-oauth-state", Value: state, Expires: exp, HttpOnly: true}
 }
