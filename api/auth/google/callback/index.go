@@ -48,6 +48,11 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+	session.Options = &sessions.Options{
+		Path:     "/",       // the root of the app
+		MaxAge:   86400 * 7, // 1 week
+		HttpOnly: true,
+	}
 	session.Values["user"] = userInfo
 	err = session.Save(r, w)
 	if err != nil {
@@ -56,7 +61,6 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	http.Redirect(w, r, "/", http.StatusTemporaryRedirect)
-
 }
 
 func getUserInfo(state, code string) (map[string]interface{}, error) {

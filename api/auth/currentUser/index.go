@@ -14,16 +14,16 @@ var store = sessions.NewCookieStore([]byte(os.Getenv("GOOGLE_OAUTH_CLIENT_SECRET
 // Handler is the primary handler for this route
 func Handler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Content-Type", "application/json")
 	gob.Register(map[string]interface{}{})
 
 	// Get a session.
 	session, err := store.Get(r, "currentUser")
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		w.WriteHeader(http.StatusInternalServerError)
+		json.NewEncoder(w).Encode(err.Error())
 		return
 	}
-
-	w.Header().Set("Content-Type", "application/json")
 
 	if v, ok := session.Values["user"]; ok {
 		w.WriteHeader(http.StatusOK)
