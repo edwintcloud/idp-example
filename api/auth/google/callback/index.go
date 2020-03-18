@@ -51,7 +51,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	session.Options = &sessions.Options{
 		Path:     "/",       // the root of the app
 		MaxAge:   86400 * 7, // 1 week
-		HttpOnly: true,
+		HttpOnly: true,      // prevent XSS vulnerabilities
 	}
 	session.Values["user"] = userInfo
 	err = session.Save(r, w)
