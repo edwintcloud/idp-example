@@ -1,0 +1,12 @@
+{
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/.*", "dest": "/index.html" }
+    ],
+    "env": {
+      "GOOGLE_OAUTH_REDIRECT_URL": "https://idp-example.now.sh/api/auth/google/callback",
+      "GOOGLE_OAUTH_CLIENT_ID": "@idp-example-google-oauth-client-id",
+      "GOOGLE_OAUTH_CLIENT_SECRET": "@idp-example-google-oauth-client-secret"
+    }
+  }
+  
