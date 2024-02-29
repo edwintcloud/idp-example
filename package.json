@@ -1,40 +1,39 @@
 {
   "name": "idp-example",
   "version": "0.0.1",
-  "description": "A Quasar Framework app",
+  "description": "A Quasar Project",
   "productName": "Idp Example",
-  "cordovaId": "org.cordova.quasar.app",
-  "capacitorId": "",
   "author": "Edwin Cloud <ecloud412@gmail.com>",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.vue src",
+    "lint": "eslint --ext .js,.ts,.vue ./",
+    "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
-    "build": "quasar build",
-    "deploy": "now --prod"
+    "dev": "quasar dev",
+    "build": "quasar build"
   },
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
-    "axios": "^0.18.1",
-    "quasar": "^1.0.0"
+    "axios": "^1.2.1",
+    "@quasar/extras": "^1.16.4",
+    "quasar": "^2.8.0",
+    "vue": "^3.4.18",
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "@quasar/app": "^1.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^4.0.0",
-    "eslint-loader": "^3.0.3",
-    "eslint-plugin-vue": "^6.1.2"
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^8.11.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "eslint-config-prettier": "^8.1.0",
+    "prettier": "^2.5.1",
+    "@types/node": "^12.20.21",
+    "@quasar/app-vite": "^1.4.3",
+    "autoprefixer": "^10.4.2",
+    "typescript": "^4.5.4"
   },
   "engines": {
-    "node": ">= 10.18.1",
+    "node": "^20 || ^18 || ^16",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
-  },
-  "browserslist": [
-    "last 1 version, not dead, ie >= 11"
-  ],
-  "resolutions": {
-    "@babel/parser": "7.7.5"
   }
 }
