@@ -23,7 +23,7 @@
 <script>
 import axios from "axios";
 
-const apiUrl = "https://idp-example.now.sh/api";
+const apiUrl = "https://idp-example.vercel.app/api";
 
 export default {
   name: "PageIndex",
