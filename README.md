@@ -1,6 +1,6 @@
 # Idp Example (idp-example)
 
-See live demo at: [https://idp-example.now.sh](https://idp-example.now.sh).
+See live demo at: [https://idp-example.vercel.app](https://idp-example.vercel.app).
 
 For an example of google sign-in using a client side js library see: [SVGToken](https://github.com/edwintcloud/SVGToken).
 
